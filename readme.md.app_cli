@@ -1,0 +1,36 @@
+#
+# CI APIs
+http://10.62.21.56:8000/docs#/
+
+# CI CLI
+```bash
+# list the build projects
+$ python app_cli.py list_build_projects
+
+# list the deploy projects
+$ python app_cli.py list_deploy_projects
+
+# list the build ids for the projects run recently
+$ python app_cli.py list_build_ids
+
+# list the build ids for the project specified
+$ python app_cli.py list_build_ids_for_project --project_name=vyze-identity-provider-build
+
+# list the current(last run) build id specified for the project
+$ python app_cli.py current_build_id_for_project  --project_name=vyze-identity-provider-build
+
+# show the details and status of the build_(id) specified and its phases
+$ python app_cli.py build_id_details  --build_id=vyze-identity-provider-build:f9f13eb8-2d8a-46cd-b6c3-1ace02adc4c9
+
+# show the logs for the build_(id) specified
+$ python app_cli.py logs_for_build vyze-identity-provider-build vyze-identity-provider-build:f9f13eb8-2d8a-46cd-b6c3-1ace02adc4c9
+
+# show the details and statuses of the last 30 builds across all projects (more for a UI to render latest statuses)
+$ python app_cli.py  list_current_builds_details
+
+# start build for the project specified
+$ python app_cli.py start_build_for_project --project_name=vyze-identity-provider-build --branch=develop --image_version=0.0.0
+
+# retry the build for build_(id) specified - WIP
+$ python app_cli.py retry_build vyze-identity-provider-build:d39470ec-39b5-48b3-a969-15e273a70aa4
+```

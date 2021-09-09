@@ -1,0 +1,8 @@
+# https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker
+# launches multiple process per CPU
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY ./app /app

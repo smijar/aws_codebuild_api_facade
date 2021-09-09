@@ -1,0 +1,4446 @@
+[
+    {
+      "id": "ecomm-backend-deploy:14bada44-17a6-43ca-a6a7-1453675ea29c",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/ecomm-backend-deploy:14bada44-17a6-43ca-a6a7-1453675ea29c",
+      "buildNumber": 4,
+      "startTime": "2021-03-02T23:05:47.876000-06:00",
+      "endTime": "2021-03-02T23:06:58.365000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "FAILED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "ecomm-backend-deploy",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:05:47.876000-06:00",
+          "endTime": "2021-03-02T23:05:47.928000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:05:47.928000-06:00",
+          "endTime": "2021-03-02T23:05:49.394000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:05:49.394000-06:00",
+          "endTime": "2021-03-02T23:06:29.409000-06:00",
+          "durationInSeconds": 40,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:06:29.409000-06:00",
+          "endTime": "2021-03-02T23:06:34.994000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:06:34.994000-06:00",
+          "endTime": "2021-03-02T23:06:50.870000-06:00",
+          "durationInSeconds": 15,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:06:50.870000-06:00",
+          "endTime": "2021-03-02T23:06:55.672000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "FAILED",
+          "startTime": "2021-03-02T23:06:55.672000-06:00",
+          "endTime": "2021-03-02T23:06:56.157000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "COMMAND_EXECUTION_ERROR",
+              "message": "Error while executing command: REQUESTS_CA_BUNDLE=../certs/ncl.loc.crt python ../utils/swarm_support.py deploy_stack_file $STACK_NAME $STACK_FILE_PATH. Reason: exit status 1"
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "FAILED",
+          "startTime": "2021-03-02T23:06:56.157000-06:00",
+          "endTime": "2021-03-02T23:06:56.229000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "COMMAND_EXECUTION_ERROR",
+              "message": "Error while executing command: bash -c \"if [ /\"$CODEBUILD_BUILD_SUCCEEDING/\" == /\"0/\" ]; then exit 1; fi\". Reason: exit status 1"
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:06:56.229000-06:00",
+          "endTime": "2021-03-02T23:06:56.258000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:06:56.258000-06:00",
+          "endTime": "2021-03-02T23:06:58.365000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T23:06:58.365000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "deployspecs/ecomm-backend-deployspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "TARGET_ENV",
+            "value": "aws-62",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/deploy-ecomm-backend-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/ecomm-backend-deploy",
+        "streamName": "14bada44-17a6-43ca-a6a7-1453675ea29c",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/ecomm-backend-deploy;stream=14bada44-17a6-43ca-a6a7-1453675ea29c",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/ecomm-backend-deploy:log-stream:14bada44-17a6-43ca-a6a7-1453675ea29c",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-01cf21bfc4c6a4c2b",
+        "networkInterfaceId": "eni-0521e3a851efd066e"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "ecomm-backend-build:26ebc4cf-4d75-4d8f-9d93-3cae6b2af79c",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/ecomm-backend-build:26ebc4cf-4d75-4d8f-9d93-3cae6b2af79c",
+      "buildNumber": 5,
+      "startTime": "2021-03-02T22:54:10.046000-06:00",
+      "endTime": "2021-03-02T23:01:34.888000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "ecomm-backend-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T22:54:10.046000-06:00",
+          "endTime": "2021-03-02T22:54:10.111000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T22:54:10.111000-06:00",
+          "endTime": "2021-03-02T22:54:11.593000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T22:54:11.593000-06:00",
+          "endTime": "2021-03-02T22:54:50.921000-06:00",
+          "durationInSeconds": 39,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T22:54:50.921000-06:00",
+          "endTime": "2021-03-02T22:55:05.332000-06:00",
+          "durationInSeconds": 14,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T22:55:05.332000-06:00",
+          "endTime": "2021-03-02T22:55:22.058000-06:00",
+          "durationInSeconds": 16,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T22:55:22.058000-06:00",
+          "endTime": "2021-03-02T22:55:29.150000-06:00",
+          "durationInSeconds": 7,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T22:55:29.150000-06:00",
+          "endTime": "2021-03-02T23:01:32.734000-06:00",
+          "durationInSeconds": 363,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:01:32.734000-06:00",
+          "endTime": "2021-03-02T23:01:32.776000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:01:32.776000-06:00",
+          "endTime": "2021-03-02T23:01:32.810000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T23:01:32.810000-06:00",
+          "endTime": "2021-03-02T23:01:34.888000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T23:01:34.888000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/ecomm-backend-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-ecomm-backend-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/ecomm-backend-build",
+        "streamName": "26ebc4cf-4d75-4d8f-9d93-3cae6b2af79c",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/ecomm-backend-build;stream=26ebc4cf-4d75-4d8f-9d93-3cae6b2af79c",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/ecomm-backend-build:log-stream:26ebc4cf-4d75-4d8f-9d93-3cae6b2af79c",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-01cf21bfc4c6a4c2b",
+        "networkInterfaceId": "eni-0c5f2972d648d94b2"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "core-consumer-deploy:5f0d8bdc-3341-40ed-9703-72b2f2f6e4a1",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/core-consumer-deploy:5f0d8bdc-3341-40ed-9703-72b2f2f6e4a1",
+      "buildNumber": 11,
+      "startTime": "2021-03-02T18:15:26.034000-06:00",
+      "endTime": "2021-03-02T18:16:41.137000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "core-consumer-deploy",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:15:26.034000-06:00",
+          "endTime": "2021-03-02T18:15:26.086000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:15:26.086000-06:00",
+          "endTime": "2021-03-02T18:15:27.421000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:15:27.421000-06:00",
+          "endTime": "2021-03-02T18:16:06.336000-06:00",
+          "durationInSeconds": 38,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:06.336000-06:00",
+          "endTime": "2021-03-02T18:16:11.052000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:11.052000-06:00",
+          "endTime": "2021-03-02T18:16:30.050000-06:00",
+          "durationInSeconds": 18,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:30.050000-06:00",
+          "endTime": "2021-03-02T18:16:35.056000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:35.056000-06:00",
+          "endTime": "2021-03-02T18:16:38.962000-06:00",
+          "durationInSeconds": 3,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:38.962000-06:00",
+          "endTime": "2021-03-02T18:16:39.005000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:39.005000-06:00",
+          "endTime": "2021-03-02T18:16:39.041000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:39.041000-06:00",
+          "endTime": "2021-03-02T18:16:41.137000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T18:16:41.137000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "deployspecs/core-consumer-deployspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "TARGET_ENV",
+            "value": "aws-62",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/deploy-core-consumer-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/core-consumer-deploy",
+        "streamName": "5f0d8bdc-3341-40ed-9703-72b2f2f6e4a1",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/core-consumer-deploy;stream=5f0d8bdc-3341-40ed-9703-72b2f2f6e4a1",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/core-consumer-deploy:log-stream:5f0d8bdc-3341-40ed-9703-72b2f2f6e4a1",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-0e6e1fbde40c1c4e9",
+        "networkInterfaceId": "eni-0e9ead6825932c8a4"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "account-process-service-deploy:e0011bd4-87b7-4e7e-a59f-7e7097a96b56",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/account-process-service-deploy:e0011bd4-87b7-4e7e-a59f-7e7097a96b56",
+      "buildNumber": 15,
+      "startTime": "2021-03-02T18:14:55.690000-06:00",
+      "endTime": "2021-03-02T18:16:10.575000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "account-process-service-deploy",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:14:55.690000-06:00",
+          "endTime": "2021-03-02T18:14:55.765000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:14:55.765000-06:00",
+          "endTime": "2021-03-02T18:14:57.173000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:14:57.173000-06:00",
+          "endTime": "2021-03-02T18:15:37.578000-06:00",
+          "durationInSeconds": 40,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:15:37.578000-06:00",
+          "endTime": "2021-03-02T18:15:43.317000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:15:43.317000-06:00",
+          "endTime": "2021-03-02T18:16:00.368000-06:00",
+          "durationInSeconds": 17,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:00.368000-06:00",
+          "endTime": "2021-03-02T18:16:05.117000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:05.117000-06:00",
+          "endTime": "2021-03-02T18:16:08.379000-06:00",
+          "durationInSeconds": 3,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:08.379000-06:00",
+          "endTime": "2021-03-02T18:16:08.419000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:08.419000-06:00",
+          "endTime": "2021-03-02T18:16:08.494000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:16:08.494000-06:00",
+          "endTime": "2021-03-02T18:16:10.575000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T18:16:10.575000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "deployspecs/account-process-service-deployspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "TARGET_ENV",
+            "value": "aws-62",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/deploy-account-process-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/account-process-service-deploy",
+        "streamName": "e0011bd4-87b7-4e7e-a59f-7e7097a96b56",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/account-process-service-deploy;stream=e0011bd4-87b7-4e7e-a59f-7e7097a96b56",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/account-process-service-deploy:log-stream:e0011bd4-87b7-4e7e-a59f-7e7097a96b56",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-0e6e1fbde40c1c4e9",
+        "networkInterfaceId": "eni-0a28f1565992b9dd0"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "account-process-service-build:41183539-97c2-4563-bcbf-a341adabbb6e",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/account-process-service-build:41183539-97c2-4563-bcbf-a341adabbb6e",
+      "buildNumber": 18,
+      "startTime": "2021-03-02T18:10:14.795000-06:00",
+      "endTime": "2021-03-02T18:13:53.526000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "account-process-service-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:10:14.795000-06:00",
+          "endTime": "2021-03-02T18:10:14.836000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:10:14.836000-06:00",
+          "endTime": "2021-03-02T18:10:16.238000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:10:16.238000-06:00",
+          "endTime": "2021-03-02T18:10:55.559000-06:00",
+          "durationInSeconds": 39,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:10:55.559000-06:00",
+          "endTime": "2021-03-02T18:11:10.396000-06:00",
+          "durationInSeconds": 14,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:11:10.396000-06:00",
+          "endTime": "2021-03-02T18:11:27.184000-06:00",
+          "durationInSeconds": 16,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:11:27.184000-06:00",
+          "endTime": "2021-03-02T18:11:32.676000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:11:32.676000-06:00",
+          "endTime": "2021-03-02T18:13:51.279000-06:00",
+          "durationInSeconds": 138,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:13:51.279000-06:00",
+          "endTime": "2021-03-02T18:13:51.317000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:13:51.317000-06:00",
+          "endTime": "2021-03-02T18:13:51.348000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:13:51.348000-06:00",
+          "endTime": "2021-03-02T18:13:53.526000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T18:13:53.526000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/account-process-service-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-account-process-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/account-process-service-build",
+        "streamName": "41183539-97c2-4563-bcbf-a341adabbb6e",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/account-process-service-build;stream=41183539-97c2-4563-bcbf-a341adabbb6e",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/account-process-service-build:log-stream:41183539-97c2-4563-bcbf-a341adabbb6e",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-05d738bd8a454943e",
+        "networkInterfaceId": "eni-07f2a1f8a7431d5cc"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "core-consumer-build:d11c74e1-07fa-4c4e-acbe-2ee254efc0e3",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/core-consumer-build:d11c74e1-07fa-4c4e-acbe-2ee254efc0e3",
+      "buildNumber": 23,
+      "startTime": "2021-03-02T18:08:50.362000-06:00",
+      "endTime": "2021-03-02T18:12:24.137000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "core-consumer-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:08:50.362000-06:00",
+          "endTime": "2021-03-02T18:08:50.413000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:08:50.413000-06:00",
+          "endTime": "2021-03-02T18:08:51.867000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:08:51.867000-06:00",
+          "endTime": "2021-03-02T18:09:31.599000-06:00",
+          "durationInSeconds": 39,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:09:31.599000-06:00",
+          "endTime": "2021-03-02T18:09:46.913000-06:00",
+          "durationInSeconds": 15,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:09:46.913000-06:00",
+          "endTime": "2021-03-02T18:10:03.222000-06:00",
+          "durationInSeconds": 16,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:10:03.222000-06:00",
+          "endTime": "2021-03-02T18:10:08.978000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:10:08.978000-06:00",
+          "endTime": "2021-03-02T18:12:21.951000-06:00",
+          "durationInSeconds": 132,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:12:21.951000-06:00",
+          "endTime": "2021-03-02T18:12:21.988000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:12:21.988000-06:00",
+          "endTime": "2021-03-02T18:12:22.060000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T18:12:22.060000-06:00",
+          "endTime": "2021-03-02T18:12:24.137000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T18:12:24.137000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/core-consumer-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-core-consumer-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/core-consumer-build",
+        "streamName": "d11c74e1-07fa-4c4e-acbe-2ee254efc0e3",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/core-consumer-build;stream=d11c74e1-07fa-4c4e-acbe-2ee254efc0e3",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/core-consumer-build:log-stream:d11c74e1-07fa-4c4e-acbe-2ee254efc0e3",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-0e6e1fbde40c1c4e9",
+        "networkInterfaceId": "eni-0626c7e1c33b1aef4"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "core-api-deploy:70189eab-b529-4c15-a4ed-a69b573d12e5",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/core-api-deploy:70189eab-b529-4c15-a4ed-a69b573d12e5",
+      "buildNumber": 18,
+      "startTime": "2021-03-02T17:56:54.482000-06:00",
+      "endTime": "2021-03-02T17:58:09.825000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "core-api-deploy",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:56:54.482000-06:00",
+          "endTime": "2021-03-02T17:56:54.542000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:56:54.542000-06:00",
+          "endTime": "2021-03-02T17:56:55.938000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:56:55.938000-06:00",
+          "endTime": "2021-03-02T17:57:36.356000-06:00",
+          "durationInSeconds": 40,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:57:36.356000-06:00",
+          "endTime": "2021-03-02T17:57:42.030000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:57:42.030000-06:00",
+          "endTime": "2021-03-02T17:57:59.701000-06:00",
+          "durationInSeconds": 17,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:57:59.701000-06:00",
+          "endTime": "2021-03-02T17:58:04.413000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:58:04.413000-06:00",
+          "endTime": "2021-03-02T17:58:07.624000-06:00",
+          "durationInSeconds": 3,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:58:07.624000-06:00",
+          "endTime": "2021-03-02T17:58:07.667000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:58:07.667000-06:00",
+          "endTime": "2021-03-02T17:58:07.702000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T17:58:07.702000-06:00",
+          "endTime": "2021-03-02T17:58:09.825000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T17:58:09.825000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "deployspecs/core-api-deployspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "TARGET_ENV",
+            "value": "aws-62",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/deploy-core-api-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/core-api-deploy",
+        "streamName": "70189eab-b529-4c15-a4ed-a69b573d12e5",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/core-api-deploy;stream=70189eab-b529-4c15-a4ed-a69b573d12e5",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/core-api-deploy:log-stream:70189eab-b529-4c15-a4ed-a69b573d12e5",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-05d738bd8a454943e",
+        "networkInterfaceId": "eni-012ffb2159ba29a2d"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "core-api-build:6538b111-f7b3-4700-9924-5fd0a9e563c2",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/core-api-build:6538b111-f7b3-4700-9924-5fd0a9e563c2",
+      "buildNumber": 19,
+      "startTime": "2021-03-02T16:37:57.619000-06:00",
+      "endTime": "2021-03-02T16:42:05.853000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "core-api-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:37:57.619000-06:00",
+          "endTime": "2021-03-02T16:37:57.682000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:37:57.682000-06:00",
+          "endTime": "2021-03-02T16:37:59.095000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:37:59.095000-06:00",
+          "endTime": "2021-03-02T16:38:38.191000-06:00",
+          "durationInSeconds": 39,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:38:38.191000-06:00",
+          "endTime": "2021-03-02T16:38:52.030000-06:00",
+          "durationInSeconds": 13,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:38:52.030000-06:00",
+          "endTime": "2021-03-02T16:39:08.764000-06:00",
+          "durationInSeconds": 16,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:39:08.764000-06:00",
+          "endTime": "2021-03-02T16:39:12.814000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:39:12.814000-06:00",
+          "endTime": "2021-03-02T16:42:03.633000-06:00",
+          "durationInSeconds": 170,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:42:03.633000-06:00",
+          "endTime": "2021-03-02T16:42:03.681000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:42:03.681000-06:00",
+          "endTime": "2021-03-02T16:42:03.724000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:42:03.724000-06:00",
+          "endTime": "2021-03-02T16:42:05.853000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T16:42:05.853000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/core-api-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-core-api-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/core-api-build",
+        "streamName": "6538b111-f7b3-4700-9924-5fd0a9e563c2",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/core-api-build;stream=6538b111-f7b3-4700-9924-5fd0a9e563c2",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/core-api-build:log-stream:6538b111-f7b3-4700-9924-5fd0a9e563c2",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-05d738bd8a454943e",
+        "networkInterfaceId": "eni-07a0c4534f2435ad4"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "core-api-build:2e8fba96-af65-4b65-9955-f4fab1df8603",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/core-api-build:2e8fba96-af65-4b65-9955-f4fab1df8603",
+      "buildNumber": 18,
+      "startTime": "2021-03-02T16:10:13.810000-06:00",
+      "endTime": "2021-03-02T16:12:10.902000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "FAILED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "core-api-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:10:13.810000-06:00",
+          "endTime": "2021-03-02T16:10:13.868000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:10:13.868000-06:00",
+          "endTime": "2021-03-02T16:10:15.284000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:10:15.284000-06:00",
+          "endTime": "2021-03-02T16:10:54.261000-06:00",
+          "durationInSeconds": 38,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:10:54.261000-06:00",
+          "endTime": "2021-03-02T16:11:09.020000-06:00",
+          "durationInSeconds": 14,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:11:09.020000-06:00",
+          "endTime": "2021-03-02T16:11:26.948000-06:00",
+          "durationInSeconds": 17,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:11:26.948000-06:00",
+          "endTime": "2021-03-02T16:11:33.125000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "FAILED",
+          "startTime": "2021-03-02T16:11:33.125000-06:00",
+          "endTime": "2021-03-02T16:12:08.693000-06:00",
+          "durationInSeconds": 35,
+          "contexts": [
+            {
+              "statusCode": "COMMAND_EXECUTION_ERROR",
+              "message": "Error while executing command: inv build. Reason: exit status 1"
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "FAILED",
+          "startTime": "2021-03-02T16:12:08.693000-06:00",
+          "endTime": "2021-03-02T16:12:08.741000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "COMMAND_EXECUTION_ERROR",
+              "message": "Error while executing command: bash -c \"if [ /\"$CODEBUILD_BUILD_SUCCEEDING/\" == /\"0/\" ]; then exit 1; fi\". Reason: exit status 1"
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:12:08.741000-06:00",
+          "endTime": "2021-03-02T16:12:08.823000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:12:08.823000-06:00",
+          "endTime": "2021-03-02T16:12:10.902000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T16:12:10.902000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/core-api-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-core-api-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/core-api-build",
+        "streamName": "2e8fba96-af65-4b65-9955-f4fab1df8603",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/core-api-build;stream=2e8fba96-af65-4b65-9955-f4fab1df8603",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/core-api-build:log-stream:2e8fba96-af65-4b65-9955-f4fab1df8603",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-05d738bd8a454943e",
+        "networkInterfaceId": "eni-0a5ec00a4d929332d"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "reference-id-service-deploy:5a3bfcc8-fd6a-49b7-9fc8-b5592fee49e1",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/reference-id-service-deploy:5a3bfcc8-fd6a-49b7-9fc8-b5592fee49e1",
+      "buildNumber": 18,
+      "startTime": "2021-03-02T16:00:51.463000-06:00",
+      "endTime": "2021-03-02T16:02:03.604000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "reference-id-service-deploy",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:00:51.463000-06:00",
+          "endTime": "2021-03-02T16:00:51.529000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:00:51.529000-06:00",
+          "endTime": "2021-03-02T16:00:52.985000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:00:52.985000-06:00",
+          "endTime": "2021-03-02T16:01:33.046000-06:00",
+          "durationInSeconds": 40,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:01:33.046000-06:00",
+          "endTime": "2021-03-02T16:01:37.819000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:01:37.819000-06:00",
+          "endTime": "2021-03-02T16:01:54.960000-06:00",
+          "durationInSeconds": 17,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:01:54.960000-06:00",
+          "endTime": "2021-03-02T16:02:00.115000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:02:00.115000-06:00",
+          "endTime": "2021-03-02T16:02:01.438000-06:00",
+          "durationInSeconds": 1,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:02:01.438000-06:00",
+          "endTime": "2021-03-02T16:02:01.485000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:02:01.485000-06:00",
+          "endTime": "2021-03-02T16:02:01.524000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T16:02:01.524000-06:00",
+          "endTime": "2021-03-02T16:02:03.604000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T16:02:03.604000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "deployspecs/reference-id-service-deployspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "TARGET_ENV",
+            "value": "aws-62",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/deploy-reference-id-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/reference-id-service-deploy",
+        "streamName": "5a3bfcc8-fd6a-49b7-9fc8-b5592fee49e1",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/reference-id-service-deploy;stream=5a3bfcc8-fd6a-49b7-9fc8-b5592fee49e1",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/reference-id-service-deploy:log-stream:5a3bfcc8-fd6a-49b7-9fc8-b5592fee49e1",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-01cf21bfc4c6a4c2b",
+        "networkInterfaceId": "eni-05ba773ea7784eabe"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "reference-id-service-build:f49f7391-e081-414c-8387-1328aa460768",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/reference-id-service-build:f49f7391-e081-414c-8387-1328aa460768",
+      "buildNumber": 19,
+      "startTime": "2021-03-02T15:25:19.543000-06:00",
+      "endTime": "2021-03-02T15:28:25.413000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "reference-id-service-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:25:19.543000-06:00",
+          "endTime": "2021-03-02T15:25:19.583000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:25:19.583000-06:00",
+          "endTime": "2021-03-02T15:25:20.925000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:25:20.925000-06:00",
+          "endTime": "2021-03-02T15:26:00.857000-06:00",
+          "durationInSeconds": 39,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:26:00.857000-06:00",
+          "endTime": "2021-03-02T15:26:16.275000-06:00",
+          "durationInSeconds": 15,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:26:16.275000-06:00",
+          "endTime": "2021-03-02T15:26:32.575000-06:00",
+          "durationInSeconds": 16,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:26:32.575000-06:00",
+          "endTime": "2021-03-02T15:26:36.676000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:26:36.676000-06:00",
+          "endTime": "2021-03-02T15:28:23.099000-06:00",
+          "durationInSeconds": 106,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:28:23.099000-06:00",
+          "endTime": "2021-03-02T15:28:23.190000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:28:23.190000-06:00",
+          "endTime": "2021-03-02T15:28:23.275000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:28:23.275000-06:00",
+          "endTime": "2021-03-02T15:28:25.413000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T15:28:25.413000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/reference-id-service-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-reference-id-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/reference-id-service-build",
+        "streamName": "f49f7391-e081-414c-8387-1328aa460768",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/reference-id-service-build;stream=f49f7391-e081-414c-8387-1328aa460768",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/reference-id-service-build:log-stream:f49f7391-e081-414c-8387-1328aa460768",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-05d738bd8a454943e",
+        "networkInterfaceId": "eni-08251c8a1c4be9428"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "weighted-distribution-service-deploy:7247b45b-7c24-4848-bba2-c0f50b8fbda9",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/weighted-distribution-service-deploy:7247b45b-7c24-4848-bba2-c0f50b8fbda9",
+      "buildNumber": 16,
+      "startTime": "2021-03-02T15:20:22.322000-06:00",
+      "endTime": "2021-03-02T15:21:36.874000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "weighted-distribution-service-deploy",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:20:22.322000-06:00",
+          "endTime": "2021-03-02T15:20:22.388000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:20:22.388000-06:00",
+          "endTime": "2021-03-02T15:20:23.858000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:20:23.858000-06:00",
+          "endTime": "2021-03-02T15:21:02.804000-06:00",
+          "durationInSeconds": 38,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:21:02.804000-06:00",
+          "endTime": "2021-03-02T15:21:08.538000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:21:08.538000-06:00",
+          "endTime": "2021-03-02T15:21:26.362000-06:00",
+          "durationInSeconds": 17,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:21:26.362000-06:00",
+          "endTime": "2021-03-02T15:21:31.332000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:21:31.332000-06:00",
+          "endTime": "2021-03-02T15:21:34.695000-06:00",
+          "durationInSeconds": 3,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:21:34.695000-06:00",
+          "endTime": "2021-03-02T15:21:34.742000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:21:34.742000-06:00",
+          "endTime": "2021-03-02T15:21:34.783000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:21:34.783000-06:00",
+          "endTime": "2021-03-02T15:21:36.874000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T15:21:36.874000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "deployspecs/weighted-distribution-service-deployspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "TARGET_ENV",
+            "value": "aws-62",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/deploy-weighted-distribution-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/weighted-distribution-service-deploy",
+        "streamName": "7247b45b-7c24-4848-bba2-c0f50b8fbda9",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/weighted-distribution-service-deploy;stream=7247b45b-7c24-4848-bba2-c0f50b8fbda9",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/weighted-distribution-service-deploy:log-stream:7247b45b-7c24-4848-bba2-c0f50b8fbda9",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-0e6e1fbde40c1c4e9",
+        "networkInterfaceId": "eni-04f06b1dbfa076dfc"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "weighted-distribution-service-build:8ad7cfdf-a842-4eda-ab19-e8c1a19c325d",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/weighted-distribution-service-build:8ad7cfdf-a842-4eda-ab19-e8c1a19c325d",
+      "buildNumber": 16,
+      "startTime": "2021-03-02T15:15:57.132000-06:00",
+      "endTime": "2021-03-02T15:19:04.874000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "weighted-distribution-service-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:15:57.132000-06:00",
+          "endTime": "2021-03-02T15:15:57.176000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:15:57.176000-06:00",
+          "endTime": "2021-03-02T15:15:58.629000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:15:58.629000-06:00",
+          "endTime": "2021-03-02T15:16:38.017000-06:00",
+          "durationInSeconds": 39,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:16:38.017000-06:00",
+          "endTime": "2021-03-02T15:16:51.716000-06:00",
+          "durationInSeconds": 13,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:16:51.716000-06:00",
+          "endTime": "2021-03-02T15:17:08.688000-06:00",
+          "durationInSeconds": 16,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:17:08.688000-06:00",
+          "endTime": "2021-03-02T15:17:14.228000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:17:14.228000-06:00",
+          "endTime": "2021-03-02T15:19:02.658000-06:00",
+          "durationInSeconds": 108,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:19:02.658000-06:00",
+          "endTime": "2021-03-02T15:19:02.698000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:19:02.698000-06:00",
+          "endTime": "2021-03-02T15:19:02.730000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:19:02.730000-06:00",
+          "endTime": "2021-03-02T15:19:04.874000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T15:19:04.874000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/weighted-distribution-service-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-weighted-distribution-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/weighted-distribution-service-build",
+        "streamName": "8ad7cfdf-a842-4eda-ab19-e8c1a19c325d",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/weighted-distribution-service-build;stream=8ad7cfdf-a842-4eda-ab19-e8c1a19c325d",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/weighted-distribution-service-build:log-stream:8ad7cfdf-a842-4eda-ab19-e8c1a19c325d",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-0e6e1fbde40c1c4e9",
+        "networkInterfaceId": "eni-07368cdf6e772e48a"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "reference-id-service-deploy:5ce6c0db-8dfa-4f91-9ba2-fe5a856853f0",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/reference-id-service-deploy:5ce6c0db-8dfa-4f91-9ba2-fe5a856853f0",
+      "buildNumber": 17,
+      "startTime": "2021-03-02T15:02:27.697000-06:00",
+      "endTime": "2021-03-02T15:03:40.158000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "reference-id-service-deploy",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:02:27.697000-06:00",
+          "endTime": "2021-03-02T15:02:27.739000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:02:27.739000-06:00",
+          "endTime": "2021-03-02T15:02:29.179000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:02:29.179000-06:00",
+          "endTime": "2021-03-02T15:03:07.555000-06:00",
+          "durationInSeconds": 38,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:03:07.555000-06:00",
+          "endTime": "2021-03-02T15:03:13.837000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:03:13.837000-06:00",
+          "endTime": "2021-03-02T15:03:30.137000-06:00",
+          "durationInSeconds": 16,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:03:30.137000-06:00",
+          "endTime": "2021-03-02T15:03:34.541000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:03:34.541000-06:00",
+          "endTime": "2021-03-02T15:03:37.963000-06:00",
+          "durationInSeconds": 3,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:03:37.963000-06:00",
+          "endTime": "2021-03-02T15:03:38.006000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:03:38.006000-06:00",
+          "endTime": "2021-03-02T15:03:38.039000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:03:38.039000-06:00",
+          "endTime": "2021-03-02T15:03:40.158000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T15:03:40.158000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "deployspecs/reference-id-service-deployspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "TARGET_ENV",
+            "value": "aws-62",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/deploy-reference-id-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/reference-id-service-deploy",
+        "streamName": "5ce6c0db-8dfa-4f91-9ba2-fe5a856853f0",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/reference-id-service-deploy;stream=5ce6c0db-8dfa-4f91-9ba2-fe5a856853f0",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/reference-id-service-deploy:log-stream:5ce6c0db-8dfa-4f91-9ba2-fe5a856853f0",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-01cf21bfc4c6a4c2b",
+        "networkInterfaceId": "eni-0a044565401f08c0e"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "reference-id-service-build:96b47f96-a4a7-43a2-98dd-83bcc35e0ee8",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/reference-id-service-build:96b47f96-a4a7-43a2-98dd-83bcc35e0ee8",
+      "buildNumber": 18,
+      "startTime": "2021-03-02T14:58:18.626000-06:00",
+      "endTime": "2021-03-02T15:01:40.658000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "reference-id-service-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:58:18.626000-06:00",
+          "endTime": "2021-03-02T14:58:18.675000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:58:18.675000-06:00",
+          "endTime": "2021-03-02T14:58:20.123000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:58:20.123000-06:00",
+          "endTime": "2021-03-02T14:59:01.490000-06:00",
+          "durationInSeconds": 41,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:59:01.490000-06:00",
+          "endTime": "2021-03-02T14:59:20.755000-06:00",
+          "durationInSeconds": 19,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:59:20.755000-06:00",
+          "endTime": "2021-03-02T14:59:40.016000-06:00",
+          "durationInSeconds": 19,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:59:40.016000-06:00",
+          "endTime": "2021-03-02T14:59:46.166000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:59:46.166000-06:00",
+          "endTime": "2021-03-02T15:01:38.459000-06:00",
+          "durationInSeconds": 112,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:01:38.459000-06:00",
+          "endTime": "2021-03-02T15:01:38.497000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:01:38.497000-06:00",
+          "endTime": "2021-03-02T15:01:38.527000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T15:01:38.527000-06:00",
+          "endTime": "2021-03-02T15:01:40.658000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T15:01:40.658000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/reference-id-service-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-reference-id-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/reference-id-service-build",
+        "streamName": "96b47f96-a4a7-43a2-98dd-83bcc35e0ee8",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/reference-id-service-build;stream=96b47f96-a4a7-43a2-98dd-83bcc35e0ee8",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/reference-id-service-build:log-stream:96b47f96-a4a7-43a2-98dd-83bcc35e0ee8",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-0e6e1fbde40c1c4e9",
+        "networkInterfaceId": "eni-0183f15fd946bbd45"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "rendering-service-build:8a63f734-8d7b-4e0d-8eaf-70f63ee8813a",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/rendering-service-build:8a63f734-8d7b-4e0d-8eaf-70f63ee8813a",
+      "buildNumber": 22,
+      "startTime": "2021-03-02T14:12:10.663000-06:00",
+      "endTime": "2021-03-02T14:13:42.950000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "FAILED",
+      "sourceVersion": "arn:aws:s3:::codepipeline-us-east-2-284378654940/rendering-service-pi/SourceArti/Z0lVM3Q",
+      "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+      "projectName": "rendering-service-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:12:10.663000-06:00",
+          "endTime": "2021-03-02T14:12:10.817000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:12:10.817000-06:00",
+          "endTime": "2021-03-02T14:12:12.330000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:12:12.330000-06:00",
+          "endTime": "2021-03-02T14:12:52.819000-06:00",
+          "durationInSeconds": 40,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:12:52.819000-06:00",
+          "endTime": "2021-03-02T14:13:10.934000-06:00",
+          "durationInSeconds": 18,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:13:10.934000-06:00",
+          "endTime": "2021-03-02T14:13:28.868000-06:00",
+          "durationInSeconds": 17,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:13:28.868000-06:00",
+          "endTime": "2021-03-02T14:13:35.393000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "FAILED",
+          "startTime": "2021-03-02T14:13:35.393000-06:00",
+          "endTime": "2021-03-02T14:13:40.706000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "COMMAND_EXECUTION_ERROR",
+              "message": "Error while executing command: inv build. Reason: exit status 100"
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "FAILED",
+          "startTime": "2021-03-02T14:13:40.706000-06:00",
+          "endTime": "2021-03-02T14:13:40.753000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "COMMAND_EXECUTION_ERROR",
+              "message": "Error while executing command: bash -c \"if [ /\"$CODEBUILD_BUILD_SUCCEEDING/\" == /\"0/\" ]; then exit 1; fi\". Reason: exit status 1"
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:13:40.753000-06:00",
+          "endTime": "2021-03-02T14:13:40.829000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-02T14:13:40.829000-06:00",
+          "endTime": "2021-03-02T14:13:42.950000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-02T14:13:42.950000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODEPIPELINE",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/rendering-service-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-rendering-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/rendering-service-build",
+        "streamName": "8a63f734-8d7b-4e0d-8eaf-70f63ee8813a",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/rendering-service-build;stream=8a63f734-8d7b-4e0d-8eaf-70f63ee8813a",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/rendering-service-build:log-stream:8a63f734-8d7b-4e0d-8eaf-70f63ee8813a",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "codepipeline/rendering-service-pipeline",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-0e6e1fbde40c1c4e9",
+        "networkInterfaceId": "eni-0dce0c9b650d54c5a"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "vyze-notification-service-deploy:425ad926-d6fa-4910-bf48-5415759adb81",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/vyze-notification-service-deploy:425ad926-d6fa-4910-bf48-5415759adb81",
+      "buildNumber": 14,
+      "startTime": "2021-03-01T23:58:43.230000-06:00",
+      "endTime": "2021-03-01T23:59:58.535000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "arn:aws:s3:::codepipeline-us-east-2-284378654940/vyze-notification-se/SourceArti/fNTc7ii",
+      "resolvedSourceVersion": "6833e22454b2375db7ff5855e7ee5eed7800c46d",
+      "projectName": "vyze-notification-service-deploy",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:58:43.230000-06:00",
+          "endTime": "2021-03-01T23:58:43.312000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:58:43.312000-06:00",
+          "endTime": "2021-03-01T23:58:44.721000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:58:44.721000-06:00",
+          "endTime": "2021-03-01T23:59:25.976000-06:00",
+          "durationInSeconds": 41,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:59:25.976000-06:00",
+          "endTime": "2021-03-01T23:59:31.858000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:59:31.858000-06:00",
+          "endTime": "2021-03-01T23:59:49.951000-06:00",
+          "durationInSeconds": 18,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:59:49.951000-06:00",
+          "endTime": "2021-03-01T23:59:54.580000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:59:54.580000-06:00",
+          "endTime": "2021-03-01T23:59:56.275000-06:00",
+          "durationInSeconds": 1,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:59:56.275000-06:00",
+          "endTime": "2021-03-01T23:59:56.323000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:59:56.323000-06:00",
+          "endTime": "2021-03-01T23:59:56.407000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:59:56.407000-06:00",
+          "endTime": "2021-03-01T23:59:58.535000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-01T23:59:58.535000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODEPIPELINE",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "deployspecs/vyze-notification-service-deployspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "TARGET_ENV",
+            "value": "aws-62",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/deploy-vyze-notification-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/vyze-notification-service-deploy",
+        "streamName": "425ad926-d6fa-4910-bf48-5415759adb81",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/vyze-notification-service-deploy;stream=425ad926-d6fa-4910-bf48-5415759adb81",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/vyze-notification-service-deploy:log-stream:425ad926-d6fa-4910-bf48-5415759adb81",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "codepipeline/vyze-notification-service-pipeline",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-0e6e1fbde40c1c4e9",
+        "networkInterfaceId": "eni-0b61aa68fd67f3bf4"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "vyze-notification-service-build:f469505b-adff-463c-9f8c-c16f55bcf484",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/vyze-notification-service-build:f469505b-adff-463c-9f8c-c16f55bcf484",
+      "buildNumber": 20,
+      "startTime": "2021-03-01T23:54:04.975000-06:00",
+      "endTime": "2021-03-01T23:58:03.922000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "arn:aws:s3:::codepipeline-us-east-2-284378654940/vyze-notification-se/SourceArti/fNTc7ii",
+      "resolvedSourceVersion": "6833e22454b2375db7ff5855e7ee5eed7800c46d",
+      "projectName": "vyze-notification-service-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:54:04.975000-06:00",
+          "endTime": "2021-03-01T23:54:05.129000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:54:05.129000-06:00",
+          "endTime": "2021-03-01T23:54:06.679000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:54:06.679000-06:00",
+          "endTime": "2021-03-01T23:54:43.918000-06:00",
+          "durationInSeconds": 37,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:54:43.918000-06:00",
+          "endTime": "2021-03-01T23:54:58.948000-06:00",
+          "durationInSeconds": 15,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:54:58.948000-06:00",
+          "endTime": "2021-03-01T23:55:14.609000-06:00",
+          "durationInSeconds": 15,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:55:14.609000-06:00",
+          "endTime": "2021-03-01T23:55:20.311000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:55:20.311000-06:00",
+          "endTime": "2021-03-01T23:58:01.719000-06:00",
+          "durationInSeconds": 161,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:58:01.719000-06:00",
+          "endTime": "2021-03-01T23:58:01.778000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:58:01.778000-06:00",
+          "endTime": "2021-03-01T23:58:01.827000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:58:01.827000-06:00",
+          "endTime": "2021-03-01T23:58:03.922000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-01T23:58:03.922000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODEPIPELINE",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/vyze-notification-service-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-vyze-notification-service-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/vyze-notification-service-build",
+        "streamName": "f469505b-adff-463c-9f8c-c16f55bcf484",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/vyze-notification-service-build;stream=f469505b-adff-463c-9f8c-c16f55bcf484",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/vyze-notification-service-build:log-stream:f469505b-adff-463c-9f8c-c16f55bcf484",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "codepipeline/vyze-notification-service-pipeline",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-05d738bd8a454943e",
+        "networkInterfaceId": "eni-0dc1d560c7ce81558"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "vyze-kafka-producer-deploy:2598d1ee-61dd-4e03-b536-8837710ee1e6",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/vyze-kafka-producer-deploy:2598d1ee-61dd-4e03-b536-8837710ee1e6",
+      "buildNumber": 3,
+      "startTime": "2021-03-01T23:41:41.884000-06:00",
+      "endTime": "2021-03-01T23:42:57.034000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "6833e22454b2375db7ff5855e7ee5eed7800c46d",
+      "projectName": "vyze-kafka-producer-deploy",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:41:41.884000-06:00",
+          "endTime": "2021-03-01T23:41:41.921000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:41:41.921000-06:00",
+          "endTime": "2021-03-01T23:41:43.317000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:41:43.317000-06:00",
+          "endTime": "2021-03-01T23:42:24.703000-06:00",
+          "durationInSeconds": 41,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:42:24.703000-06:00",
+          "endTime": "2021-03-01T23:42:30.579000-06:00",
+          "durationInSeconds": 5,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:42:30.579000-06:00",
+          "endTime": "2021-03-01T23:42:48.418000-06:00",
+          "durationInSeconds": 17,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:42:48.418000-06:00",
+          "endTime": "2021-03-01T23:42:53.049000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:42:53.049000-06:00",
+          "endTime": "2021-03-01T23:42:54.800000-06:00",
+          "durationInSeconds": 1,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:42:54.800000-06:00",
+          "endTime": "2021-03-01T23:42:54.851000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:42:54.851000-06:00",
+          "endTime": "2021-03-01T23:42:54.902000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:42:54.902000-06:00",
+          "endTime": "2021-03-01T23:42:57.034000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-01T23:42:57.034000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "deployspecs/vyze-kafka-producer-deployspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [],
+      "secondarySourceVersions": [],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "TARGET_ENV",
+            "value": "aws-62",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/deploy-vyze-kafka-producer-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/vyze-kafka-producer-deploy",
+        "streamName": "2598d1ee-61dd-4e03-b536-8837710ee1e6",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/vyze-kafka-producer-deploy;stream=2598d1ee-61dd-4e03-b536-8837710ee1e6",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/vyze-kafka-producer-deploy:log-stream:2598d1ee-61dd-4e03-b536-8837710ee1e6",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-0e6e1fbde40c1c4e9",
+        "networkInterfaceId": "eni-03d682e4cde4ede25"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    },
+    {
+      "id": "vyze-kafka-producer-build:8e2f8d0f-2557-4cdd-bc05-6b13ebd2dc8c",
+      "arn": "arn:aws:codebuild:us-east-2:829018605820:build/vyze-kafka-producer-build:8e2f8d0f-2557-4cdd-bc05-6b13ebd2dc8c",
+      "buildNumber": 19,
+      "startTime": "2021-03-01T23:36:41.031000-06:00",
+      "endTime": "2021-03-01T23:40:30.955000-06:00",
+      "currentPhase": "COMPLETED",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "refs/heads/master",
+      "resolvedSourceVersion": "6833e22454b2375db7ff5855e7ee5eed7800c46d",
+      "projectName": "vyze-kafka-producer-build",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:36:41.031000-06:00",
+          "endTime": "2021-03-01T23:36:41.095000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:36:41.095000-06:00",
+          "endTime": "2021-03-01T23:36:42.589000-06:00",
+          "durationInSeconds": 1
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:36:42.589000-06:00",
+          "endTime": "2021-03-01T23:37:21.867000-06:00",
+          "durationInSeconds": 39,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:37:21.867000-06:00",
+          "endTime": "2021-03-01T23:37:36.684000-06:00",
+          "durationInSeconds": 14,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:37:36.684000-06:00",
+          "endTime": "2021-03-01T23:37:54.718000-06:00",
+          "durationInSeconds": 18,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:37:54.718000-06:00",
+          "endTime": "2021-03-01T23:38:00.935000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:38:00.935000-06:00",
+          "endTime": "2021-03-01T23:40:28.725000-06:00",
+          "durationInSeconds": 147,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:40:28.725000-06:00",
+          "endTime": "2021-03-01T23:40:28.814000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:40:28.814000-06:00",
+          "endTime": "2021-03-01T23:40:28.848000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2021-03-01T23:40:28.848000-06:00",
+          "endTime": "2021-03-01T23:40:30.955000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2021-03-01T23:40:30.955000-06:00"
+        }
+      ],
+      "source": {
+        "type": "CODECOMMIT",
+        "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+        "gitCloneDepth": 1,
+        "gitSubmodulesConfig": {
+          "fetchSubmodules": false
+        },
+        "buildspec": "buildspecs/vyze-kafka-producer-buildspec.yml",
+        "insecureSsl": false
+      },
+      "secondarySources": [
+        {
+          "type": "S3",
+          "location": "vyze-codebuild/docker_images/base_images.zip",
+          "insecureSsl": false,
+          "sourceIdentifier": "base_images"
+        }
+      ],
+      "secondarySourceVersions": [
+        {
+          "sourceIdentifier": "base_images",
+          "sourceVersion": ""
+        }
+      ],
+      "artifacts": {
+        "location": ""
+      },
+      "secondaryArtifacts": [],
+      "cache": {
+        "type": "NO_CACHE"
+      },
+      "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+          {
+            "name": "BRANCH",
+            "value": "develop",
+            "type": "PLAINTEXT"
+          },
+          {
+            "name": "IMAGE_VERSION",
+            "value": "0.0.0",
+            "type": "PLAINTEXT"
+          }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+      },
+      "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-vyze-kafka-producer-service-role",
+      "logs": {
+        "groupName": "/aws/codebuild/vyze-kafka-producer-build",
+        "streamName": "8e2f8d0f-2557-4cdd-bc05-6b13ebd2dc8c",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/vyze-kafka-producer-build;stream=8e2f8d0f-2557-4cdd-bc05-6b13ebd2dc8c",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/vyze-kafka-producer-build:log-stream:8e2f8d0f-2557-4cdd-bc05-6b13ebd2dc8c",
+        "cloudWatchLogs": {
+          "status": "ENABLED"
+        },
+        "s3Logs": {
+          "status": "DISABLED",
+          "encryptionDisabled": false
+        }
+      },
+      "timeoutInMinutes": 60,
+      "queuedTimeoutInMinutes": 480,
+      "buildComplete": true,
+      "initiator": "VyzeCloudFormationRole/sanjay.mijar@mastercard.com",
+      "vpcConfig": {
+        "vpcId": "vpc-0abfb9291625b3183",
+        "subnets": [
+          "subnet-0e6e1fbde40c1c4e9",
+          "subnet-05d738bd8a454943e",
+          "subnet-01cf21bfc4c6a4c2b"
+        ],
+        "securityGroupIds": [
+          "sg-0bcc16bd772b0540e",
+          "sg-0f7e441b9359de3c7"
+        ]
+      },
+      "networkInterface": {
+        "subnetId": "subnet-01cf21bfc4c6a4c2b",
+        "networkInterfaceId": "eni-0b1b32762ab9ea81e"
+      },
+      "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+      "fileSystemLocations": [
+        {
+          "type": "EFS",
+          "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+          "mountPoint": "/mnt/efs",
+          "identifier": "efs1",
+          "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+        }
+      ]
+    }
+  ]

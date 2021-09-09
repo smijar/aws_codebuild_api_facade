@@ -1,0 +1,191 @@
+{
+    "id": "vyze-identity-provider-build:f9f13eb8-2d8a-46cd-b6c3-1ace02adc4c9",
+    "arn": "arn:aws:codebuild:us-east-2:829018605820:build/vyze-identity-provider-build:f9f13eb8-2d8a-46cd-b6c3-1ace02adc4c9",
+    "buildNumber": 26,
+    "startTime": "2021-04-03T23:45:25.226000-05:00",
+    "endTime": "2021-04-03T23:47:50.351000-05:00",
+    "currentPhase": "COMPLETED",
+    "buildStatus": "FAILED",
+    "sourceVersion": "refs/heads/master",
+    "resolvedSourceVersion": "b249aa981c9051e45a0c7dac83755ae6501ef182",
+    "projectName": "vyze-identity-provider-build",
+    "phases": [
+      {
+        "phaseType": "SUBMITTED",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2021-04-03T23:45:25.226000-05:00",
+        "endTime": "2021-04-03T23:45:25.296000-05:00",
+        "durationInSeconds": 0
+      },
+      {
+        "phaseType": "QUEUED",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2021-04-03T23:45:25.296000-05:00",
+        "endTime": "2021-04-03T23:45:26.983000-05:00",
+        "durationInSeconds": 1
+      },
+      {
+        "phaseType": "PROVISIONING",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2021-04-03T23:45:26.983000-05:00",
+        "endTime": "2021-04-03T23:46:06.298000-05:00",
+        "durationInSeconds": 39,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "DOWNLOAD_SOURCE",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2021-04-03T23:46:06.298000-05:00",
+        "endTime": "2021-04-03T23:46:25.890000-05:00",
+        "durationInSeconds": 19,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "INSTALL",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2021-04-03T23:46:25.890000-05:00",
+        "endTime": "2021-04-03T23:46:46.316000-05:00",
+        "durationInSeconds": 20,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "PRE_BUILD",
+        "phaseStatus": "FAILED",
+        "startTime": "2021-04-03T23:46:46.316000-05:00",
+        "endTime": "2021-04-03T23:47:48.220000-05:00",
+        "durationInSeconds": 61,
+        "contexts": [
+          {
+            "statusCode": "COMMAND_EXECUTION_ERROR",
+            "message": "Error while executing command: GIT_SSL_NO_VERIFY=true git clone https://stash/scm/plat/vyze-identity-provider.git. Reason: exit status 128"
+          }
+        ]
+      },
+      {
+        "phaseType": "FINALIZING",
+        "phaseStatus": "SUCCEEDED",
+        "startTime": "2021-04-03T23:47:48.220000-05:00",
+        "endTime": "2021-04-03T23:47:50.351000-05:00",
+        "durationInSeconds": 2,
+        "contexts": [
+          {
+            "statusCode": "",
+            "message": ""
+          }
+        ]
+      },
+      {
+        "phaseType": "COMPLETED",
+        "startTime": "2021-04-03T23:47:50.351000-05:00"
+      }
+    ],
+    "source": {
+      "type": "CODECOMMIT",
+      "location": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap",
+      "gitCloneDepth": 1,
+      "gitSubmodulesConfig": {
+        "fetchSubmodules": false
+      },
+      "buildspec": "buildspecs/vyze-identity-provider-buildspec.yml",
+      "insecureSsl": false
+    },
+    "secondarySources": [
+      {
+        "type": "S3",
+        "location": "vyze-codebuild/docker_images/base_images.zip",
+        "insecureSsl": false,
+        "sourceIdentifier": "base_images"
+      }
+    ],
+    "secondarySourceVersions": [
+      {
+        "sourceIdentifier": "base_images",
+        "sourceVersion": ""
+      }
+    ],
+    "artifacts": {
+      "location": ""
+    },
+    "secondaryArtifacts": [],
+    "cache": {
+      "type": "NO_CACHE"
+    },
+    "environment": {
+      "type": "LINUX_CONTAINER",
+      "image": "aws/codebuild/standard:4.0",
+      "computeType": "BUILD_GENERAL1_SMALL",
+      "environmentVariables": [
+        {
+          "name": "BRANCH",
+          "value": "develop",
+          "type": "PLAINTEXT"
+        },
+        {
+          "name": "IMAGE_VERSION",
+          "value": "0.0.0",
+          "type": "PLAINTEXT"
+        }
+      ],
+      "privilegedMode": true,
+      "imagePullCredentialsType": "CODEBUILD"
+    },
+    "serviceRole": "arn:aws:iam::829018605820:role/service-role/build-vyze-identity-provider-service-role",
+    "logs": {
+      "groupName": "/aws/codebuild/vyze-identity-provider-build",
+      "streamName": "f9f13eb8-2d8a-46cd-b6c3-1ace02adc4c9",
+      "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-2#logEvent:group=/aws/codebuild/vyze-identity-provider-build;stream=f9f13eb8-2d8a-46cd-b6c3-1ace02adc4c9",
+      "cloudWatchLogsArn": "arn:aws:logs:us-east-2:829018605820:log-group:/aws/codebuild/vyze-identity-provider-build:log-stream:f9f13eb8-2d8a-46cd-b6c3-1ace02adc4c9",
+      "cloudWatchLogs": {
+        "status": "ENABLED"
+      },
+      "s3Logs": {
+        "status": "DISABLED",
+        "encryptionDisabled": false
+      }
+    },
+    "timeoutInMinutes": 60,
+    "queuedTimeoutInMinutes": 480,
+    "buildComplete": true,
+    "initiator": "instancecodebuildpipelinerole/i-0c2607d19697fc2d5",
+    "vpcConfig": {
+      "vpcId": "vpc-0abfb9291625b3183",
+      "subnets": [
+        "subnet-0e6e1fbde40c1c4e9",
+        "subnet-05d738bd8a454943e",
+        "subnet-01cf21bfc4c6a4c2b"
+      ],
+      "securityGroupIds": [
+        "sg-0bcc16bd772b0540e",
+        "sg-0f7e441b9359de3c7"
+      ]
+    },
+    "networkInterface": {
+      "subnetId": "subnet-01cf21bfc4c6a4c2b",
+      "networkInterfaceId": "eni-0b00cabe803c2e818"
+    },
+    "encryptionKey": "arn:aws:kms:us-east-2:829018605820:alias/aws/s3",
+    "fileSystemLocations": [
+      {
+        "type": "EFS",
+        "location": "fs-0f940177.efs.us-east-2.amazonaws.com:/",
+        "mountPoint": "/mnt/efs",
+        "identifier": "efs1",
+        "mountOptions": "nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+      }
+    ]
+  }

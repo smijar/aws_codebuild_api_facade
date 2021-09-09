@@ -1,0 +1,932 @@
+{
+  "events": [
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:02 Waiting for agent ping\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:05 Waiting for DOWNLOAD_SOURCE\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Phase is DOWNLOAD_SOURCE\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 CODEBUILD_SRC_DIR=/codebuild/output/src261/src/git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 CODEBUILD_SRC_DIR_base_images=/codebuild/output/src261/src/s3/01\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 YAML location is /codebuild/output/src261/src/git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap/buildspecs/vyze-identity-provider-buildspec.yml\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Processing environment variables\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Selecting 'nodejs' runtime version '12' based on manual selections...\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Selecting 'java' runtime version 'corretto8' based on manual selections...\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Selecting 'python' runtime version '3.8' based on manual selections...\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Running command echo \"Installing Java version 8 ...\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "Installing Java version 8 ...\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Running command export JAVA_HOME=\"$JAVA_8_HOME\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Running command export JRE_HOME=\"$JRE_8_HOME\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Running command export JDK_HOME=\"$JDK_8_HOME\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:11 Running command for tool_path in \"$JAVA_8_HOME\"/bin/* \"$JRE_8_HOME\"/bin/*;\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": " do tool=`basename \"$tool_path\"`;\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "  if [ $tool != 'java-rmi.cgi' ];\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "  then\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "  update-alternatives --list \"$tool\" | grep -q \"$tool_path\" \\\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "   && update-alternatives --set \"$tool\" \"$tool_path\";\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "  fi;\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "done\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: error: no alternatives for clhsdb\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: error: no alternatives for hsdb\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: error: no alternatives for idlj\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jar to provide /usr/bin/jar (jar) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/javac to provide /usr/bin/javac (javac) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/javadoc to provide /usr/bin/javadoc (javadoc) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: error: no alternatives for javafxpackager\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/javap to provide /usr/bin/javap (javap) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: error: no alternatives for javapackager\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jcmd to provide /usr/bin/jcmd (jcmd) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jconsole to provide /usr/bin/jconsole (jconsole) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jdb to provide /usr/bin/jdb (jdb) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jdeps to provide /usr/bin/jdeps (jdeps) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jinfo to provide /usr/bin/jinfo (jinfo) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jmap to provide /usr/bin/jmap (jmap) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jps to provide /usr/bin/jps (jps) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jstack to provide /usr/bin/jstack (jstack) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jstat to provide /usr/bin/jstat (jstat) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/jstatd to provide /usr/bin/jstatd (jstatd) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/rmic to provide /usr/bin/rmic (rmic) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/bin/serialver to provide /usr/bin/serialver (serialver) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/jre/bin/java to provide /usr/bin/java (java) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/jre/bin/jjs to provide /usr/bin/jjs (jjs) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/jre/bin/keytool to provide /usr/bin/keytool (keytool) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/jre/bin/pack200 to provide /usr/bin/pack200 (pack200) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/jre/bin/rmid to provide /usr/bin/rmid (rmid) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/jre/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "update-alternatives: using /usr/lib/jvm/java-1.8.0-amazon-corretto/jre/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in manual mode\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:12 Running command echo \"Installing Node.js version 12 ...\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "Installing Node.js version 12 ...\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:12 Running command n $NODE_12_VERSION\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "   installed : v12.19.1 (with npm 6.14.8)\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command echo \"Installing Python version 3.8 ...\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "Installing Python version 3.8 ...\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command pyenv global  $PYTHON_38_VERSION\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Moving to directory /codebuild/output/src261/src/git-codecommit.us-east-2.amazonaws.com/v1/repos/build-bootstrap\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Registering with agent\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Phases found in YAML: 4\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25  POST_BUILD: 1 commands\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25  INSTALL: 25 commands\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25  PRE_BUILD: 10 commands\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25  BUILD: 13 commands\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Phase complete: DOWNLOAD_SOURCE State: SUCCEEDED\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Phase context status code:  Message: \n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Entering phase INSTALL\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command \n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command export http_proxy=\"http://proxy.ncl.loc:3128\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command export https_proxy=\"http://proxy.ncl.loc:3128\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command export no_proxy=\".ncl.loc,localhost\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command \n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command export HTTP_PROXY=\"http://proxy.ncl.loc:3128\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command export HTTPS_PROXY=\"http://proxy.ncl.loc:3128\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command export NO_PROXY=\".ncl.loc,localhost\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command \n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:25 Running command docker load < /mnt/efs/base_images/python:3.8-alpine3.10.tgz\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "Loaded image: python:3.8-alpine3.10\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:28 Running command docker images\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "python              3.8-alpine3.10      cf0232583873        10 months ago       80MB\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:28 Running command \n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:28 Running command echo \"installing utilities\"\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "installing utilities\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511589756,
+      "message": "[Container] 2021/04/04 04:46:28 Running command pip install --proxy \"proxy.ncl.loc:3128\" invoke ruamel.yaml\n",
+      "ingestionTime": 1617511589775
+    },
+    {
+      "timestamp": 1617511595806,
+      "message": "Collecting invoke\n",
+      "ingestionTime": 1617511595811
+    },
+    {
+      "timestamp": 1617511595806,
+      "message": "  Downloading invoke-1.5.0-py3-none-any.whl (211 kB)\n",
+      "ingestionTime": 1617511595811
+    },
+    {
+      "timestamp": 1617511597837,
+      "message": "Collecting ruamel.yaml\n",
+      "ingestionTime": 1617511597839
+    },
+    {
+      "timestamp": 1617511597837,
+      "message": "  Downloading ruamel.yaml-0.17.2-py3-none-any.whl (101 kB)\n",
+      "ingestionTime": 1617511597839
+    },
+    {
+      "timestamp": 1617511597837,
+      "message": "Collecting ruamel.yaml.clib>=0.1.2; platform_python_implementation == \"CPython\" and python_version < \"3.10\"\n",
+      "ingestionTime": 1617511597839
+    },
+    {
+      "timestamp": 1617511597837,
+      "message": "  Downloading ruamel.yaml.clib-0.2.2-cp38-cp38-manylinux1_x86_64.whl (578 kB)\n",
+      "ingestionTime": 1617511597839
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "Installing collected packages: invoke, ruamel.yaml.clib, ruamel.yaml\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "Successfully installed invoke-1.5.0 ruamel.yaml-0.17.2 ruamel.yaml.clib-0.2.2\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "WARNING: You are using pip version 20.2.4; however, version 21.0.1 is available.\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "You should consider upgrading via the '/root/.pyenv/versions/3.8.8/bin/python3.8 -m pip install --upgrade pip' command.\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command \n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command npm config set proxy \"http://proxy.ncl.loc:3128\"\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command \n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command echo \"installing proxy for docker client\"\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "installing proxy for docker client\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command mkdir -p /root/.docker\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command cp templates/docker-proxy-config.json /root/.docker/config.json\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command cp templates/wget_proxy_rc.txt /root/.wgetrc\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command \n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command cp $CODEBUILD_SRC_DIR/certs/ncl.loc.crt /usr/local/share/ca-certificates/ncl.loc.crt\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "[Container] 2021/04/04 04:46:38 Running command chmod 644 /usr/local/share/ca-certificates/ncl.loc.crt && update-ca-certificates\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "Updating certificates in /etc/ssl/certs...\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "1 added, 0 removed; done.\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "Running hooks in /etc/ca-certificates/update.d...\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511599861,
+      "message": "\n",
+      "ingestionTime": 1617511599864
+    },
+    {
+      "timestamp": 1617511605886,
+      "message": "Adding debian:ncl.loc.pem\n",
+      "ingestionTime": 1617511605891
+    },
+    {
+      "timestamp": 1617511605886,
+      "message": "done.\n",
+      "ingestionTime": 1617511605891
+    },
+    {
+      "timestamp": 1617511605886,
+      "message": "Updating Mono key store\n",
+      "ingestionTime": 1617511605891
+    },
+    {
+      "timestamp": 1617511605886,
+      "message": "Mono Certificate Store Sync - version 6.12.0.122\n",
+      "ingestionTime": 1617511605891
+    },
+    {
+      "timestamp": 1617511605886,
+      "message": "Populate Mono certificate store from a concatenated list of certificates.\n",
+      "ingestionTime": 1617511605891
+    },
+    {
+      "timestamp": 1617511605886,
+      "message": "Copyright 2002, 2003 Motus Technologies. Copyright 2004-2008 Novell. BSD licensed.\n",
+      "ingestionTime": 1617511605891
+    },
+    {
+      "timestamp": 1617511605886,
+      "message": "\n",
+      "ingestionTime": 1617511605891
+    },
+    {
+      "timestamp": 1617511605886,
+      "message": "Importing into legacy system store:\n",
+      "ingestionTime": 1617511605891
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "I already trust 129, your new list has 130\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "Certificate added: C=US, S=Texas, L=Austin, O=NewComLink, OU=IT, CN=ncl.loc, E=sysadmin@newcomlink.com\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "1 new root certificates were added to your trust store.\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "Import process completed.\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "Importing into BTLS system store:\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "I already trust 129, your new list has 130\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "Certificate added: C=US, S=Texas, L=Austin, O=NewComLink, OU=IT, CN=ncl.loc, E=sysadmin@newcomlink.com\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "1 new root certificates were added to your trust store.\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "Import process completed.\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "Done\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "done.\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "[Container] 2021/04/04 04:46:46 Running command \n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "[Container] 2021/04/04 04:46:46 Phase complete: INSTALL State: SUCCEEDED\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "[Container] 2021/04/04 04:46:46 Phase context status code:  Message: \n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "[Container] 2021/04/04 04:46:46 Entering phase PRE_BUILD\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "[Container] 2021/04/04 04:46:46 Running command \n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "[Container] 2021/04/04 04:46:46 Running command echo 'cloning vyze-identity-provider repo from stash...'\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "cloning vyze-identity-provider repo from stash...\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "[Container] 2021/04/04 04:46:46 Running command GIT_SSL_NO_VERIFY=true git clone https://stash/scm/plat/vyze-identity-provider.git\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511607916,
+      "message": "Cloning into 'vyze-identity-provider'...\n",
+      "ingestionTime": 1617511607919
+    },
+    {
+      "timestamp": 1617511670277,
+      "message": "fatal: unable to access 'https://stash/scm/plat/vyze-identity-provider.git/': Received HTTP code 503 from proxy after CONNECT\n",
+      "ingestionTime": 1617511670296
+    },
+    {
+      "timestamp": 1617511670277,
+      "message": "\n",
+      "ingestionTime": 1617511670296
+    },
+    {
+      "timestamp": 1617511670277,
+      "message": "[Container] 2021/04/04 04:47:48 Command did not exit successfully GIT_SSL_NO_VERIFY=true git clone https://stash/scm/plat/vyze-identity-provider.git exit status 128\n",
+      "ingestionTime": 1617511670296
+    },
+    {
+      "timestamp": 1617511670277,
+      "message": "[Container] 2021/04/04 04:47:48 Phase complete: PRE_BUILD State: FAILED\n",
+      "ingestionTime": 1617511670296
+    },
+    {
+      "timestamp": 1617511670277,
+      "message": "[Container] 2021/04/04 04:47:48 Phase context status code: COMMAND_EXECUTION_ERROR Message: Error while executing command: GIT_SSL_NO_VERIFY=true git clone https://stash/scm/plat/vyze-identity-provider.git. Reason: exit status 128\n",
+      "ingestionTime": 1617511670296
+    }
+  ],
+  "nextForwardToken": "f/36071715614497056205754520259795301342257047056766730244",
+  "nextBackwardToken": "b/36071713818818752074870214182854164276572019545774489600",
+  "ResponseMetadata": {
+    "RequestId": "e43ef435-17d1-469f-8ad7-7f81480e6c2d",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "x-amzn-requestid": "e43ef435-17d1-469f-8ad7-7f81480e6c2d",
+      "content-type": "application/x-amz-json-1.1",
+      "content-length": "37405",
+      "date": "Sun, 04 Apr 2021 20:56:02 GMT"
+    },
+    "RetryAttempts": 0
+  }
+}

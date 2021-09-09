@@ -1,0 +1,8 @@
+fastapi==0.62.0
+uvicorn==0.13.1
+boto3==1.17.20
+botocore==1.20.20
+loguru==0.5.3
+fire==0.4.0
+prettytable==2.0.0
+requests==2.25.1

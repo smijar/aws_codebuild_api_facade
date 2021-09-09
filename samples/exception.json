@@ -1,0 +1,3 @@
+{
+    "message": "Error! AttributeError(\"'FastAPI' object has no attribute 'get_logs_for_build'\")"
+}

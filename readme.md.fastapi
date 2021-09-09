@@ -1,0 +1,72 @@
+# SNS ref
+https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html
+promotional
+
+good article:
+https://blog.shikisoft.com/send-sms-with-sns-aws-lambda-python/
+
+https://bradmontgomery.net/blog/sending-sms-messages-amazon-sns-and-python/
+
+### IAM policy for SNS publish
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "sns:Publish",
+            "Resource": "*"
+        }
+    ]
+}
+
+### IAM policy for codebuild and codepipeline
+
+# FastAPI
+### fastapi fast start
+https://testdriven.io/courses/tdd-fastapi/getting-started/
+https://testdriven.io/courses/tdd-fastapi/docker-config/
+
+### to run:
+uvicorn app.main:app
+
+with auto reload:
+uvicorn app.main:app --reload
+
+# uvicorn
+reload enables auto reload so the server will restart after changes are made to the code base.
+workers 1 provides a single worker process.
+host 0.0.0.0 defines the address to host the server on.
+port 8000 defines the port to host the server on.
+
+### to see API
+http://localhost:8000/ping
+
+### to see API swagger docs
+http://localhost:8000/docs
+
+# configuring
+Config
+Add a new file called config.py to the "app" directory, where we'll define environment-specific configuration variables:
+
+Here, we defined a Settings class with two attributes:
+
+environment - defines the environment (i.e., dev, stage, prod)
+testing - defines whether or not we're in test mode
+BaseSettings, from Pydantic, validates the data so that when we create an instance of Settings, environment and testing will have types of str and bool, respectively
+
+### to change environment and settings:
+(env)$ export ENVIRONMENT=prod
+(env)$ export TESTING=1
+
+### async handlers
+Let's convert the synchronous handler over to an asynchronous one.
+
+async def pong(settings: Settings = Depends(get_settings)):
+    return {
+        "ping": "pong!",
+        "environment": settings.environment,
+        "testing": settings.testing
+    }
+
+# Dockerizing
+https://testdriven.io/courses/tdd-fastapi/docker-config/
